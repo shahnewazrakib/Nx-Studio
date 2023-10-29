@@ -6,8 +6,10 @@ function Footer() {
   return (
     <footer>
       <div className="bg-dark text-center space-y-4 py-8">
-        <h1 className="text-4xl font-bold text-white">Nx Studio.</h1>
-        <p className="w-1/3 mx-auto text-gray leading-relaxed">
+        <h1 className="text-2xl lg:text-4xl font-bold text-white">
+          Nx Studio.
+        </h1>
+        <p className="w-[95%] md:w-1/2 2xl:w-1/3 mx-auto text-gray leading-relaxed">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores quo
           quae nobis sint dolores laboriosam rerum aliquam doloribus qui
           sapiente.
@@ -28,7 +30,7 @@ function Footer() {
         </div>
       </div>
       <div className="bg-footer__dark py-3 text-gray/80 text-sm">
-        <div className="container flex items-center justify-between">
+        <div className="container flex items-center sm:flex-row flex-col justify-between sm:gap-0 gap-2 text-center">
           <p>Copyright © {new Date().getFullYear()} reserved by Nx Studio.</p>
           <div className="flex items-center gap-x-6">
             <Link to="home" smooth={true}>

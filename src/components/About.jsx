@@ -1,6 +1,7 @@
 import { AiOutlineAreaChart, AiFillHeart } from "react-icons/ai";
 import { FaTools, FaArrowRight } from "react-icons/fa";
 import Banner from "../images/about-us.webp";
+import { Link } from "react-scroll";
 
 function About() {
   const cards = [
@@ -38,26 +39,30 @@ function About() {
   ];
 
   return (
-    <section className="container">
-      <h1 className="text-4xl text-center font-bold">Our Core Strength</h1>
-      <p className="w-1/2 text-light leading-relaxed mx-auto text-center mt-5">
+    <section id="about" className="container">
+      <h1 className="text-xl sm:text-2xl lg:text-4xl text-center font-bold">
+        Our Core Strength
+      </h1>
+      <p className="lg:w-1/2 text-light leading-relaxed mx-auto text-center mt-2 sm:mt-5">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quia
         consectetur voluptate mollitia quae, optio reiciendis ut porro veniam
         quo!
       </p>
-      <div className="grid grid-cols-3 gap-8 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 mt-8 sm:mt-12 md:mt-16">
         {cards.map((card, index) => {
           return (
             <div
               key={index}
-              className={`${card.card__color} rounded-lg p-8 relative`}
+              className={`${card.card__color} rounded-lg p-6 md:p-8 relative`}
             >
               <div
-                className={`absolute -top-5 w-[50px] h-[50px] ${card.icon__color} rounded-full text-white flex items-center justify-center text-2xl`}
+                className={`absolute top-4 md:-top-5 md:right-auto right-4 w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] opacity-30 md:opacity-100 ${card.icon__color} rounded-full text-white flex items-center justify-center text-2xl`}
               >
                 {card.icon}
               </div>
-              <h2 className="font-semibold text-xl mt-5">{card.title}</h2>
+              <h2 className="font-semibold text-[18px] sm:text-xl md:mt-5">
+                {card.title}
+              </h2>
               <p className="text-light leading-relaxed mt-4">
                 {card.description}
               </p>
@@ -66,12 +71,12 @@ function About() {
         })}
       </div>
 
-      <div className="flex justify-between mt-20">
-        <picture className="w-[45%]">
+      <div className="flex justify-between mt-8 sm:mt-14 md:mt-20">
+        <picture className="w-[45%] lg:block hidden">
           <img src={Banner} alt="Nx Studio" />
         </picture>
-        <div className="w-[50%] space-y-5">
-          <h1 className="text-4xl font-bold leading-snug">
+        <div className="lg:w-[50%] space-y-3 sm:space-y-5 lg:text-left text-center">
+          <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold leading-snug">
             Crafting Digital Success <br /> Stories - Nx Studio.
           </h1>
           <p className="text-light leading-relaxed">
@@ -84,21 +89,23 @@ function About() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
             repellat ratione maiores quisquam accusamus laborum eligendi.
           </p>
-          <button className="bg-violet text-sm rounded-md px-3 py-[10px] text-white flex items-center gap-3">
+          <Link to="services" smooth={true} offset={-120} className="bg-violet text-sm rounded-md px-3 py-[10px] text-white flex items-center gap-3 lg:mx-0 mx-auto w-max sm:cursor-pointer">
             <span>Know More</span>
             <FaArrowRight />
-          </button>
+          </Link>
         </div>
       </div>
 
-      <div className="grid grid-cols-4 mt-16 -mb-16">
+      <div className="grid grid-cols-2 sm:grid-cols-4 mt-16 sm:mb-0 mb-12 2xl:-mb-16 sm:gap-0 gap-y-4">
         {success.map((item, index) => {
           return (
             <div key={index} className="text-center">
-              <h1 className="text-4xl text-center font-bold text-green">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-bold text-green">
                 {item.completed}
               </h1>
-              <p className="text-light leading-relaxed mt-2">{item.description}</p>
+              <p className="sm:text-base text-[15px] text-light leading-relaxed sm:mt-2">
+                {item.description}
+              </p>
             </div>
           );
         })}

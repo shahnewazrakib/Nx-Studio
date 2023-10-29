@@ -8,14 +8,24 @@ import "swiper/css/pagination";
 
 function Reviews() {
   return (
-    <section className="container">
-      <h1 className="text-4xl text-center font-bold">What Our Clients Says</h1>
+    <section id="review" className="container">
+      <h1 className="text-xl sm:text-2xl lg:text-4xl text-center font-bold">
+        What Our Clients Says
+      </h1>
       <Swiper
         modules={[Pagination]}
         spaceBetween={35}
-        slidesPerView={3}
-        pagination={{clickable: true}}
-        className="pt-8 pb-12 px-3 mt-8"
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          1024: {
+            slidesPerView: 3,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+        }}
+        className="pt-8 pb-12 px-3 md:mt-8"
       >
         {[...Array(6)].map((_, index) => (
           <SwiperSlide
@@ -27,11 +37,11 @@ function Reviews() {
                 <img
                   src={Men}
                   alt="John Doe"
-                  className="w-[60px] h-[60px] rounded-full object-cover"
+                  className="w-[50px] md:w-[60px] h-[50px] md:h-[60px] rounded-full object-cover"
                 />
               </picture>
               <div className="space-y-1">
-                <h2 className="font-semibold text-[1.3rem]">John Doe</h2>
+                <h2 className="font-semibold text-base sm:text-[18px] md:text-[1.3rem]">John Doe</h2>
                 <div className="flex items-center gap-1 text-yellow text-sm">
                   <FaStar />
                   <FaStar />
@@ -42,7 +52,7 @@ function Reviews() {
               </div>
             </div>
 
-            <p className="text-light leading-relaxed mt-6">
+            <p className="text-light leading-relaxed mt-4 lg:mt-6 md:text-base text-[15px]">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat
               nihil deserunt porro praesentium, provident similique! Voluptates,
               deleniti. Dolorem nam placeat magni eum nihil hic fugiat expli.

@@ -6,7 +6,7 @@ import Services from "./components/Services";
 import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Popup from "./components/Popup";
+import Popup from "./components/popup/Popup";
 import "./App.css";
 
 function App() {
@@ -20,9 +20,10 @@ function App() {
     }
   }, [open]);
 
+
   return (
     <>
-      <div className="space-y-20">
+      <div className="space-y-10 sm:space-y-14 md:space-y-20">
         <Header />
         <Hero />
         <About />
