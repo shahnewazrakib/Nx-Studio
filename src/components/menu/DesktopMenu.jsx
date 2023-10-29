@@ -4,19 +4,19 @@ function DesktopMenu() {
   return (
     <>
       <menu className="md:flex hidden text-dark items-center gap-x-8 lg:gap-x-14">
-        <Link className={styles.link} to="home" smooth={true} offset={-150}>
+        <Link className={styles.link} to="home" smooth={true} offset={-150} spy={true}>
           Home
         </Link>
-        <Link className={styles.link} to="about" smooth={true} offset={-150}>
+        <Link className={styles.link} to="about" smooth={true} offset={-150} spy={true}>
           About
         </Link>
-        <Link className={styles.link} to="services" smooth={true} offset={-150}>
+        <Link className={styles.link} to="services" smooth={true} offset={-150} spy={true}>
           Services
         </Link>
-        <Link className={styles.link} to="review" smooth={true} offset={-150}>
+        <Link className={styles.link} to="review" smooth={true} offset={-150} spy={true}>
           Reviews
         </Link>
-        <Link className={styles.link} to="contact" smooth={true} offset={-150}>
+        <Link className={styles.link} to="contact" smooth={true} offset={-150} spy={true}>
           Contact
         </Link>
       </menu>

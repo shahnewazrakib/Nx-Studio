@@ -17,6 +17,7 @@ function MobileMenu({ openMobileMenu, setOpenMobileMenu }) {
         className={styles.link}
         to="home"
         smooth={true}
+        spy={true}
       >
         Home
       </Link>
@@ -26,6 +27,7 @@ function MobileMenu({ openMobileMenu, setOpenMobileMenu }) {
         className={styles.link}
         to="about"
         smooth={true}
+        spy={true}
       >
         About
       </Link>
@@ -35,6 +37,7 @@ function MobileMenu({ openMobileMenu, setOpenMobileMenu }) {
         className={styles.link}
         to="services"
         smooth={true}
+        spy={true}
       >
         Services
       </Link>
@@ -44,6 +47,7 @@ function MobileMenu({ openMobileMenu, setOpenMobileMenu }) {
         className={styles.link}
         to="review"
         smooth={true}
+        spy={true}
       >
         Reviews
       </Link>
@@ -53,6 +57,7 @@ function MobileMenu({ openMobileMenu, setOpenMobileMenu }) {
         className={styles.link}
         to="contact"
         smooth={true}
+        spy={true}
       >
         Contact
       </Link>
