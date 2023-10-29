@@ -9,7 +9,7 @@ function Popup({ open, setOpen }) {
           : "opacity-0 pointer-events-none"
       } transition duration-300 w-screen h-screen fixed top-0 left-0 z-[1000] bg-[#7a9c974d] backdrop-blur-xl flex items-center justify-center shadow-xl`}
     >
-      <div className="w-[500px] bg-white rounded-lg p-8">
+      <div className="w-[96%] sm:w-[500px] bg-white rounded-lg p-4 sm:p-8">
         <h1 className="text-xl font-semibold text-center">Send A Message</h1>
         <p className="text-light mt-1 text-center">
           Lorem ipsum dolor sit amet.
