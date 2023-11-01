@@ -1,6 +1,5 @@
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter, FaYoutube } from "react-icons/fa6";
-import { Link } from "react-scroll";
 
 function Footer() {
   return (
@@ -33,12 +32,8 @@ function Footer() {
         <div className="container flex items-center sm:flex-row flex-col justify-between sm:gap-0 gap-2 text-center">
           <p>Copyright © {new Date().getFullYear()} reserved by Nx Studio.</p>
           <div className="flex items-center gap-x-6">
-            <Link to="home" smooth={true}>
-              Terms & Services
-            </Link>
-            <Link to="home" smooth={true}>
-              Privacy Policy
-            </Link>
+            <a href="#home">Terms & Services</a>
+            <a href="#home">Privacy Policy</a>
           </div>
         </div>
       </div>
