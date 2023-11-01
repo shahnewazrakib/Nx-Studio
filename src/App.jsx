@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-      <div className="space-y-10 sm:space-y-14 md:space-y-20">
+      <div id="home" className="space-y-10 sm:space-y-14 md:space-y-20">
         <Header />
         <Hero />
         <About />

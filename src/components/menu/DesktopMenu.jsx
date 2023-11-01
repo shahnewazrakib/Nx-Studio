@@ -1,24 +1,23 @@
 import { FaPhone } from "react-icons/fa";
-import { Link } from "react-scroll";
 function DesktopMenu() {
   return (
     <>
       <menu className="md:flex hidden text-dark items-center gap-x-8 lg:gap-x-14">
-        <Link className={styles.link} to="home" smooth={true} offset={-150} spy={true}>
+        <a className={styles.link} href="#home">
           Home
-        </Link>
-        <Link className={styles.link} to="about" smooth={true} offset={-150} spy={true}>
+        </a>
+        <a className={styles.link} href="#about">
           About
-        </Link>
-        <Link className={styles.link} to="services" smooth={true} offset={-150} spy={true}>
+        </a>
+        <a className={styles.link} href="#services">
           Services
-        </Link>
-        <Link className={styles.link} to="review" smooth={true} offset={-150} spy={true}>
+        </a>
+        <a className={styles.link} href="#reviews">
           Reviews
-        </Link>
-        <Link className={styles.link} to="contact" smooth={true} offset={-150} spy={true}>
+        </a>
+        <a className={styles.link} href="#contact">
           Contact
-        </Link>
+        </a>
       </menu>
       <a
         href="tel:+000000000"

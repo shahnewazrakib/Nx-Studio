@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 function Reviews() {
   return (
-    <section id="review" className="container">
+    <section className="container">
       <h1 className="text-xl sm:text-2xl lg:text-4xl text-center font-bold">
         What Our Clients Says
       </h1>

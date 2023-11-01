@@ -38,10 +38,7 @@ function Services() {
     },
   ];
   return (
-    <section
-      id="services"
-      className="container flex 2xl:flex-row flex-col items-center gap-16"
-    >
+    <section className="container flex 2xl:flex-row flex-col items-center gap-16">
       <div className="flex-1 space-y-3 sm:space-y-5 2xl:text-left text-center">
         <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold leading-snug">
           What Services We Offer ?
@@ -74,7 +71,10 @@ function Services() {
               <h2 className="font-semibold text-base md:text-[1.3rem] mt-4 sm:mt-5">
                 {service.title}
               </h2>
-              <p className="text-light leading-relaxed mt-3 sm:mt-4">
+              <p
+                id={index === services.length - 1 ? "reviews" : "desc"}
+                className="text-light leading-relaxed mt-3 sm:mt-4"
+              >
                 {service.description}
               </p>
             </div>

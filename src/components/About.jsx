@@ -1,7 +1,6 @@
 import { AiOutlineAreaChart, AiFillHeart } from "react-icons/ai";
 import { FaTools, FaArrowRight } from "react-icons/fa";
 import Banner from "../images/about-us.webp";
-import { Link } from "react-scroll";
 
 function About() {
   const cards = [
@@ -39,7 +38,7 @@ function About() {
   ];
 
   return (
-    <section id="about" className="container">
+    <section className="container">
       <h1 className="text-xl sm:text-2xl lg:text-4xl text-center font-bold">
         Our Core Strength
       </h1>
@@ -89,14 +88,20 @@ function About() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
             repellat ratione maiores quisquam accusamus laborum eligendi.
           </p>
-          <Link to="services" smooth={true} offset={-120} className="bg-violet text-sm rounded-md px-3 py-[10px] text-white flex items-center gap-3 lg:mx-0 mx-auto w-max sm:cursor-pointer">
+          <a
+            href="#services"
+            className="bg-violet text-sm rounded-md px-3 py-[10px] text-white flex items-center gap-3 lg:mx-0 mx-auto w-max sm:cursor-pointer"
+          >
             <span>Know More</span>
             <FaArrowRight />
-          </Link>
+          </a>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 mt-16 sm:mb-0 mb-12 2xl:-mb-16 sm:gap-0 gap-y-4">
+      <div
+        id="services"
+        className="grid grid-cols-2 sm:grid-cols-4 mt-16 sm:mb-0 mb-12 2xl:-mb-16 sm:gap-0 gap-y-4"
+      >
         {success.map((item, index) => {
           return (
             <div key={index} className="text-center">
